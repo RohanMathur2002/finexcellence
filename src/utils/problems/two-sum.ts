@@ -37,14 +37,13 @@ const handlerTwoSum = (fn: any) => {
 
 export const twoSum: Problem = {
 	id: "two-sum",
-	title: "1. Two Sum",
+	docUrl: 'https://s21.q4cdn.com/399680738/files/doc_financials/annual_reports/2023/2021-Annual-Report.pdf',
+	title: "1. Meta (Facebook) 2021",
 	problemStatement: `<p class='mt-3'>
-  Given an array of integers <code>nums</code> and an integer <code>target</code>, return
-  <em>indices of the two numbers such that they add up to</em> <code>target</code>.
+ Given is the Annual Financial Report of Meta (Facebook) for the financial year of 2021. 
 </p>
 <p class='mt-3'>
-  You may assume that each input would have <strong>exactly one solution</strong>, and you
-  may not use thesame element twice.
+Evaluate the financial model for the next 3 Financial Years.
 </p>
 <p class='mt-3'>You can return the answer in any order.</p>`,
 	examples: [

@@ -13,6 +13,7 @@ import { problems } from "@/utils/problems";
 import { useRouter } from "next/router";
 import { arrayUnion, doc, updateDoc } from "firebase/firestore";
 import useLocalStorage from "@/hooks/useLocalStorage";
+import Sheet from "./spreadSheet";
 
 type PlaygroundProps = {
 	problem: Problem;
@@ -116,7 +117,14 @@ const Playground: React.FC<PlaygroundProps> = ({ problem, setSuccess, setSolved 
 			<PreferenceNav settings={settings} setSettings={setSettings} />
 
 			<Split className='h-[calc(100vh-94px)]' direction='vertical' sizes={[60, 40]} minSize={60}>
-				<div className='w-full overflow-auto'>
+
+				
+					<Sheet />
+				
+				
+
+
+				{/* <div className='w-full overflow-auto'>
 					<CodeMirror
 						value={userCode}
 						theme={vscodeDark}
@@ -124,10 +132,11 @@ const Playground: React.FC<PlaygroundProps> = ({ problem, setSuccess, setSolved 
 						extensions={[javascript()]}
 						style={{ fontSize: settings.fontSize }}
 					/>
-				</div>
-				<div className='w-full px-5 overflow-auto'>
-					{/* testcase heading */}
-					<div className='flex h-10 items-center space-x-6'>
+
+				</div> */}
+				<div className='w-full px-5 overflow-auto bg-white'>
+
+					{/* <div className='flex h-10 items-center space-x-6'>
 						<div className='relative flex h-full flex-col justify-center cursor-pointer'>
 							<div className='text-sm font-medium leading-5 text-white'>Testcases</div>
 							<hr className='absolute bottom-0 h-0.5 w-full rounded-full border-none bg-white' />
@@ -163,11 +172,22 @@ const Playground: React.FC<PlaygroundProps> = ({ problem, setSuccess, setSolved 
 						<div className='w-full cursor-text rounded-lg border px-3 py-[10px] bg-dark-fill-3 border-transparent text-white mt-2'>
 							{problem.examples[activeTestCaseId].outputText}
 						</div>
-					</div>
+					</div> */}
 				</div>
+
+
+				
+
+
+
+
+
+
+
 			</Split>
 			<EditorFooter handleSubmit={handleSubmit} />
 		</div>
 	);
 };
 export default Playground;
+

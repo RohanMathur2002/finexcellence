@@ -11,6 +11,9 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
+				"light-green":"rgb(156,202,176)",
+				"gray-blue":"rgb(89, 137, 153)",
+				"navy-blue":"rgb(3, 6, 66)",
 				"dark-layer-1": "rgb(40,40,40)",
 				"dark-layer-2": "rgb(26,26,26)",
 				"dark-label-2": "rgba(239, 241, 246, 0.75)",
@@ -21,7 +24,7 @@ module.exports = {
 				"dark-gray-7": "rgb(179, 179, 179)",
 				"gray-8": "rgb(38, 38, 38)",
 				"dark-gray-8": "rgb(219, 219, 219)",
-				"brand-orange": "rgb(255 161 22)",
+				"brand-orange": "rgb(3, 6, 66)",
 				"brand-orange-s": "rgb(193, 122, 15)",
 				"dark-yellow": "rgb(255 192 30)",
 				"dark-pink": "rgb(255 55 95)",

@@ -9,6 +9,7 @@ export type Example = {
 // local problem data
 export type Problem = {
 	id: string;
+	docUrl : string;
 	title: string;
 	problemStatement: string;
 	examples: Example[];

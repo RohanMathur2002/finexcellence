@@ -27,13 +27,13 @@ const starterCodeJumpGameJS = `function canJump(nums) {
 
 export const jumpGame: Problem = {
 	id: "jump-game",
-	title: "3. Jump Game",
+	docUrl: 'https://s2.q4cdn.com/470004039/files/doc_earnings/2023/q4/filing/_10-K-Q4-2023-As-Filed.pdf',
+	title: "1. Apple Inc.",
 	problemStatement: `<p class='mt-3'>
-    You are given an integer array <code>nums</code>. You are initially positioned at the <strong>first index</strong>
-    and each element in the array represents your maximum jump length at that position.
+    Given is the Annual Financial Report of Apple Inc. for the financial year of 2023.
   </p>
     <p class='mt-3'>
-    Return <code>true</code> if you can reach the last index, or <code>false</code> otherwise.
+    Evaluate the financial model for the next 3 Financial Years.
     </p>
   `,
 

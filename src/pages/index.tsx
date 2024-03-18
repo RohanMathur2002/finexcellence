@@ -12,13 +12,13 @@ export default function Home() {
 
 	return (
 		<>
-			<main className='bg-dark-layer-2 min-h-screen'>
+			<main className='bg-gradient-to-b from-white to-light-green min-h-screen'>
 				<Topbar />
 				<h1
-					className='text-2xl text-center text-gray-700 dark:text-gray-400 font-medium
+					className='text-2xl text-center text-slate-900 dark:text-black font-medium
 					uppercase mt-10 mb-5'
 				>
-					&ldquo; QUALITY OVER QUANTITY &rdquo; 👇
+					QUALITY OVER QUANTITY
 				</h1>
 				<div className='relative overflow-x-auto mx-auto px-6 pb-10'>
 					{loadingProblems && (

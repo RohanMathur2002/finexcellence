@@ -9,6 +9,7 @@ import { AiFillLike, AiFillDislike, AiOutlineLoading3Quarters, AiFillStar } from
 import { BsCheck2Circle } from "react-icons/bs";
 import { TiStarOutline } from "react-icons/ti";
 import { toast } from "react-toastify";
+import DocumentViewer from "../Playground/testDoc";
 
 type ProblemDescriptionProps = {
 	problem: Problem;
@@ -20,6 +21,8 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = ({ problem, _solve
 	const { currentProblem, loading, problemDifficultyClass, setCurrentProblem } = useGetCurrentProblem(problem.id);
 	const { liked, disliked, solved, setData, starred } = useGetUsersDataOnProblem(problem.id);
 	const [updating, setUpdating] = useState(false);
+
+	//const documentUrl = 'https://s21.q4cdn.com/399680738/files/doc_financials/annual_reports/2023/2021-Annual-Report.pdf';
 
 	const returnUserDataAndProblemData = async (transaction: any) => {
 		const userRef = doc(firestore, "users", user!.uid);
@@ -154,10 +157,10 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = ({ problem, _solve
 	};
 
 	return (
-		<div className='bg-dark-layer-1'>
+		<div className='bg-white'>
 			{/* TAB */}
-			<div className='flex h-11 w-full items-center pt-2 bg-dark-layer-2 text-white overflow-x-hidden'>
-				<div className={"bg-dark-layer-1 rounded-t-[5px] px-5 py-[10px] text-xs cursor-pointer"}>
+			<div className='flex h-11 w-full items-center pt-2 bg-slate-300 text-white overflow-x-hidden'>
+				<div className={"bg-slate-600 rounded-t-[5px] px-5 py-[10px] text-xs cursor-pointer"}>
 					Description
 				</div>
 			</div>
@@ -167,7 +170,7 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = ({ problem, _solve
 					{/* Problem heading */}
 					<div className='w-full'>
 						<div className='flex space-x-4'>
-							<div className='flex-1 mr-2 text-lg text-white font-medium'>{problem?.title}</div>
+							<div className='flex-1 mr-2 text-lg text-navy-blue font-medium'>{problem?.title}</div>
 						</div>
 						{!loading && currentProblem && (
 							<div className='flex items-center mt-3'>
@@ -223,12 +226,14 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = ({ problem, _solve
 						)}
 
 						{/* Problem Statement(paragraphs) */}
-						<div className='text-white text-sm'>
+						<div className='text-black text-sm'>
 							<div dangerouslySetInnerHTML={{ __html: problem.problemStatement }} />
 						</div>
 
+						<DocumentViewer documentUrl={problem.docUrl}/>
+
 						{/* Examples */}
-						<div className='mt-4'>
+						{/* <div className='mt-4'>
 							{problem.examples.map((example, index) => (
 								<div key={example.id}>
 									<p className='font-medium text-white '>Example {index + 1}: </p>
@@ -248,15 +253,15 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = ({ problem, _solve
 									</div>
 								</div>
 							))}
-						</div>
+						</div> */}
 
 						{/* Constraints */}
-						<div className='my-8 pb-4'>
+						{/* <div className='my-8 pb-4'>
 							<div className='text-white text-sm font-medium'>Constraints:</div>
 							<ul className='text-white ml-5 list-disc '>
 								<div dangerouslySetInnerHTML={{ __html: problem.constraints }} />
 							</ul>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>
